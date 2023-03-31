@@ -20,6 +20,12 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
+                        <label class="control-label">Imagen</label>
+                        <input type="text" class="form-control" name="Detalles" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
                         <label class="control-label">Tipo de Habitacion</label>
                         <input type="text" class="form-control" name="ClaseHabitacion" />
                     </div>
@@ -78,6 +84,9 @@
         <tr>
             @*<th>
                 @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imagen)
             </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.ClaseHabitacion)
@@ -101,6 +110,9 @@
                 @*<td>
                     @Html.DisplayFor(modelItem => item.Id)
             </td>*@
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.imagen)
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.ClaseHabitacion)
                 </td>

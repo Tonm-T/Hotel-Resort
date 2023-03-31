@@ -26,6 +26,7 @@ namespace HotelResort.AccesoADatos
                 using (var bdContexto = new BDContexto())
                 {
                     var catalogo = await bdContexto.CatalogoHotel.FirstOrDefaultAsync(c => c.Id == pCatalogoH.Id);
+                    catalogo.imagen = pCatalogoH.imagen;
                     catalogo.ClaseHabitacion = pCatalogoH.ClaseHabitacion;
                     catalogo.Detalles = pCatalogoH.Detalles;
                     catalogo.Precio = pCatalogoH.Precio;
@@ -71,6 +72,8 @@ namespace HotelResort.AccesoADatos
             {
             if (pCatalogoH.Id > 0)
                 pQuery = pQuery.Where(c => c.Id == pCatalogoH.Id);
+            if (!string.IsNullOrWhiteSpace(pCatalogoH.imagen))
+                pQuery = pQuery.Where(c => c.imagen.Contains(pCatalogoH.imagen));
             if (!string.IsNullOrWhiteSpace(pCatalogoH.ClaseHabitacion))
                     pQuery = pQuery.Where(c => c.ClaseHabitacion.Contains(pCatalogoH.ClaseHabitacion));
             if (!string.IsNullOrWhiteSpace(pCatalogoH.Detalles))
