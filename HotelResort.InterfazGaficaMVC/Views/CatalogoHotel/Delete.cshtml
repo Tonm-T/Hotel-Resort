@@ -1,0 +1,46 @@
+﻿@model HotelResort.EntidadDeNegocio.CatalogoHotel
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar el registro del Cliente</h1>
+
+<h3>Estas seguro de eliminar el registro de forma permanente ❌📛?</h3>
+<div>
+
+    <hr />
+    <dl class="row">
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClaseHabitacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClaseHabitacion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Detalles)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Detalles)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NumHabitacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumHabitacion)
+        </dd>
+        
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="submit" value="Eliminar" class="btn btn-outline-danger" /> |
+        <a asp-action="/Index" class="btn btn-outline-warning">Regresar ala Lista</a>
+    </form>
+</div>

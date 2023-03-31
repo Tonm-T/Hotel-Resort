@@ -1,0 +1,77 @@
+﻿@model HotelResort.EntidadDeNegocio.Empleado
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar el registro del Empleado</h1>
+
+<h3> Quieres borrar el registro de Forma permanente❌📛?</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Movil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Movil)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dui)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dui)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClaveEmpleado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClaveEmpleado)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoCargoId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoCargo.Cargo)
+        </dd>
+     
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-outline-danger" /> |
+        <a asp-action="Index" class="btn btn-outline-warning">Regresar ala Lista</a>
+    </form>
+</div>

@@ -1,0 +1,123 @@
+﻿@model IEnumerable<HotelResort.EntidadDeNegocio.Reservacion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <body>
+
+        <main>
+
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">Configuraciones de Administracion</h1>
+                        <img src="/Images/RegistroCLiente.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                    </div>
+                </div>
+            </section>
+
+            <div class="album py-5 bg-light justify-content-center">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 justify-content-center">
+                        <div class="col">
+                            <div class="card shadow-sm justify-content-center">
+                                <img src="/Images/RegistroCLiente.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                                <div class="card-body">
+                                    <h5 class="card-title">¿Quieres ir al CRUD y Registro de Cliente?</h5>
+                                    <br />
+                                    <p class="card-text">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="Cliente/Index" class="btn btn-primary">Ingresar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="/Images/Registro CLiente (1).gif" class="card-img-top" alt="logo-icono" style="height: 20rem">
+                                <div class="card-body">
+                                    <h5 class="card-title">¿Quieres ir al CRUD y registro del Empleado?</h5>
+                                    <br />
+                                    <p class="card-text">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="Empleado/Index" class="btn btn-primary">Ingresar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="/Images/Registro CLiente (2).gif" class="card-img-top" alt="logo-icono" style="height: 20rem">
+                                <div class="card-body">
+                                    <h5 class="card-title">¿Quieres ir al CRUD y registro de Tipo Cargo?</h5>
+                                    <br />
+                                    <p class="card-text">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="TipoCargo/Index" class="btn btn-primary">Ingresar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="/Images/Registro CLiente (3).gif" class="card-img-top" alt="logo-icono" style="height: 20rem">
+                                <div class="card-body">
+                                    <h5 class="card-title">¿Quieres ir a Cambiar tu clave de Empleado?</h5>
+                                    <br />
+                                    <p class="card-text">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="Empleado/CambiarPassword" class="btn btn-primary">Ingresar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="/Images/Registro CLiente (3).gif" class="card-img-top" alt="logo-icono" style="height: 20rem">
+                                <div class="card-body">
+                                    <h5 class="card-title">¿Quieres ir al preio y numero de habitacion?</h5>
+                                    <br />
+                                    <p class="card-text">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="CatalogoHotel/Index" class="btn btn-primary">Ingresar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="text-muted py-5">
+            <div class="container">
+                <p class="float-end mb-1">
+                    <a href="#">Volver arriba </a>
+                </p>
+                <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+                <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+            </div>
+        </footer>
+
+
+        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    </body>
+}

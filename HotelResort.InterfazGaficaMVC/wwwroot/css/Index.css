@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+body {
+    background-image: url();
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header .textosprincipal {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+header2 {
+    width: 100px;
+    height: 150px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+    animation-name: latir;
+    animation-duration: 1s;
+    animation-iteration-count: 25s;
+}
+
+@keyframes latir {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(.5);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.5);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.5);
+    }
+}
+
+.capa {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.logo h1 {
+    color: #f4f7f8;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }

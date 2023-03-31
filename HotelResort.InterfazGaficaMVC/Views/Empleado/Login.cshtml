@@ -1,0 +1,64 @@
+﻿@model HotelResort.EntidadDeNegocio.Empleado
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<body class="bg-info d-flex align-items-center vh-100">
+    @*clase para justificar texto y justificar el contenedor*@
+    <div class="modal-dialog justify-content-center">
+        @*justificar col-sm-15 para todo el contenido de tamaño*@
+        <div class="col-sm-13 main-section">
+            @*tamaño del contenedor*@
+            <div class="modal-content p-sm-5 p-xxl-5 border-danger border-3">
+                <div class="text-center">
+                    <img src="/Images/login.png" alt="login-icon" style="height: 7rem;" />
+                </div>
+                <br />
+                <h3 class="text-center">Iniciar Sesion</h3>
+                <br />
+                <div class="row">
+                    <div class="col-md-15">
+                        <p class="">Ingrese N. DUI</p>
+                        <form asp-action="Login">
+                            <input type="hidden" name="pReturnUrl" value="@ViewBag.Url" />
+                            <div class="col-md-15">
+                                <div class="form-group input-group-text text-decoration-underline">
+                                    <label class="control-label"></label>
+                                    <div>
+                                        <img src="~/Images/icono6.png" alt="login-icono" style="height: 3rem" />
+                                    </div>
+                                    <input asp-for="Dui" class="form-control text-center" placeholder="Ejemplo: 00000000-0" />
+                                    <span asp-validation-for="Dui" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-md-15">
+                                <p class="">Ingrese su clave</p>
+                                <div class="form-group input-group-text">
+                                    <label class="control-label text-center"></label>
+                                    <div>
+                                        <img src="~/Images/iconocan.png" alt="login-icono" style="height: 3rem" />
+                                    </div>
+                                    <input asp-for="ClaveEmpleado " class="form-control text-center" placeholder="*********" />
+                                    <span asp-validation-for="ClaveEmpleado " class="text-danger"></span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-group text-center">
+                                <input type="submit" value="Ingresar" class="btn btn-outline-info" />
+                            </div>
+                            <span class="text-danger">@ViewBag.Error</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

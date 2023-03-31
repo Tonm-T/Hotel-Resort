@@ -1,0 +1,26 @@
+﻿@model HotelResort.EntidadDeNegocio.TipoCargo
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles del Cargo</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+       
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+      
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Id }, new {@class = "btn btn-outline-primary"}) |
+    <a asp-action="Index" class="btn btn-outline-warning">Regresar a Lista</a>
+</div>

@@ -1,0 +1,67 @@
+﻿@model HotelResort.EntidadDeNegocio.Reservacion
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles del Cliente</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NIdentidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NIdentidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FyHRegistro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FyHRegistro)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FyHEntrada)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FyHEntrada)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FyHSalida)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FyHSalida)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Modificar", "Edit", new {  id = Model.Id }, new {@class = "btn btn-outline-primary"}) |
+    <a asp-action="Index" class="btn btn-outline-warning">Regresar ala Lista</a>
+</div>

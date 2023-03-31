@@ -1,0 +1,28 @@
+﻿@model HotelResort.EntidadDeNegocio.TipoCargo
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar el propuesto Cargo</h1>
+
+<h3>Deseas Eliminar el Cargo?</h3>
+<div>
+    <h4>TipoCargo</h4>
+    <hr />
+    <dl class="row">
+       
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+      
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Eliminar" class="btn btn-outline-danger" /> |
+        <a asp-action="Index" class="btn btn-outline-warning">Regresar ala Lista</a>
+    </form>
+</div>

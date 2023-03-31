@@ -1,0 +1,218 @@
+﻿@model IEnumerable<HotelResort.EntidadDeNegocio.CatalogoHotel>
+<!DOCTYPE html>
+<html lang="en">
+    @{
+    List<HotelResort.EntidadDeNegocio.CatalogoHotel> catalogo = ViewBag.CatalogoHotel as List<HotelResort.EntidadDeNegocio.CatalogoHotel>;
+
+    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xtra Blog</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/templatemo-xtra-blog.css" rel="stylesheet">
+    <link href="~/css/Btn-1.css" rel="stylesheet">
+</head>
+<body>
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">CATALOGO</h1>
+                        <p class="text-body">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                    </div>
+                </div>
+            </section>
+<<<<<<< HEAD
+            @foreach (var item in Model){
+=======
+            <div class="album py-5 bg-transparent">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-10 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta1.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <h5 class="card-title bg-transparent">¿Quieres ir al Registro de Cliente?</h5>
+                                <br />
+                                <p class="card-text text-body">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+>>>>>>> c5d47a71b12226e0a6f58255cdc43d2bcddbd2e2
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta 2.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <a href="" class="text-reset text-danger">
+                                <p>Nombre: @Html.DisplayFor(modelItem => item.ClaseHabitacion) </p>
+                                </a>
+                                <br />
+                                <a href="" class="text-reset text-danger">
+                                <p>Precio:@Html.DisplayFor(modelItem => item.Precio) </p>
+                                </a>
+                                <br />
+                                <a href="" class="text-reset text-danger">
+                                <p>Numero de Habitacion:@Html.DisplayFor(modelItem => item.NumHabitacion) </p>
+                                </a>
+                                <div  class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<<<<<<< HEAD
+                    }
+=======
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta 3.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <h5 class="card-title bg-transparent">¿Quieres ir al Registro de Cliente?</h5>
+                                <br />
+                                <p class="card-text text-body">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta 4.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <h5 class="card-title bg-transparent">¿Quieres ir al Registro de Cliente?</h5>
+                                <br />
+                                <p class="card-text text-body">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta 5.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <h5 class="card-title bg-transparent">¿Quieres ir al Registro de Cliente?</h5>
+                                <br />
+                                <p class="card-text text-body">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta 6.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <h5 class="card-title bg-transparent">¿Quieres ir al Registro de Cliente?</h5>
+                                <br />
+                                <p class="card-text text-body">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta 7.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <h5 class="card-title bg-transparent">¿Quieres ir al Registro de Cliente?</h5>
+                                <br />
+                                <p class="card-text text-body">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta 8.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <h5 class="card-title bg-transparent">¿Quieres ir al Registro de Cliente?</h5>
+                                <br />
+                                <p class="card-text text-body">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta 9.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <h5 class="card-title bg-transparent">¿Quieres ir al Registro de Cliente?</h5>
+                                <br />
+                                <p class="card-text text-body">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="/Images/Oferta 10.gif" class="card-img-top" alt="logo-icon" style="height: 20rem">
+                            <div class="card-body">
+                                <h5 class="card-title bg-transparent">¿Quieres ir al Registro de Cliente?</h5>
+                                <br />
+                                <p class="card-text text-body">En este apartado podras ir al regirto del cliente y poder modificar, buscar o eliminar cualquier registro</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="Cliente/Index" class="btn btn-primary">Reservar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+>>>>>>> c5d47a71b12226e0a6f58255cdc43d2bcddbd2e2
+        </main>
+        <footer>
+        <div class="Lelo">
+            <a href="~/Home/Index" class="btn-neon">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+                <span id="span4"></span>
+                REGRESAR
+            </a>
+        </div>
+        </footer>
+    </body>
+</html>
+<script>
+    
+</script>

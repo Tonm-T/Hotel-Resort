@@ -1,0 +1,82 @@
+﻿@model HotelResort.EntidadDeNegocio.Empleado
+
+@{
+    ViewData["Title"] = "Crear";
+    List<HotelResort.EntidadDeNegocio.TipoCargo> tipocargo = ViewBag.TipoCargo as List<HotelResort.EntidadDeNegocio.TipoCargo>;
+}
+
+<h1>Crear Nuevo Empleado</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellido" class="control-label"></label>
+                <input asp-for="Apellido" class="form-control" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movil" class="control-label"></label>
+                <input asp-for="Movil" class="form-control" />
+                <span asp-validation-for="Movil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dui" class="control-label"></label>
+                <input asp-for="Dui" class="form-control" />
+                <span asp-validation-for="Dui" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClaveEmpleado" class="control-label"></label>
+                <input asp-for="ClaveEmpleado" class="form-control" />
+                <span asp-validation-for="ClaveEmpleado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaRegistro" class="control-label"></label>
+                <input asp-for="FechaRegistro" class="form-control" />
+                <span asp-validation-for="FechaRegistro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoCargoId" class="control-label"></label>
+
+                <select asp-for="TipoCargoId" class="form-control">
+                    <option selected value="">Seleccionar</option>
+                    @foreach (var item in tipocargo)
+                    {
+                        <option value="@item.Id">@item.Cargo</option>
+                    }
+                </select>
+
+                <span asp-validation-for="TipoCargoId" class="text-danger"></span>
+            </div>
+          <br />
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-outline-success" /> |
+                <a asp-action="Index" class="btn btn-outline-warning">Regresar ala Lista</a>
+            </div>
+            <span class="text-danger">@ViewBag.Error</span>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
