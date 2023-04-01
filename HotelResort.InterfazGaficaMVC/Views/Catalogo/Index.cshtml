@@ -36,7 +36,7 @@
                                 <div class="card-body">
                                     <a href="" class="text-reset">
                                         <p class="text-body">Nombre: @Html.DisplayFor(modelItem => item.ClaseHabitacion) </p>
-                                        <p class="text-body">ID:@Html.DisplayFor(modelItem => item.Id) </p>
+                                        
                                     </a>
                                     <br />
                                     <a href="" class="text-reset">
@@ -47,9 +47,10 @@
                                     </a>
                                  
                                     <div class="">
-                                        <div class="btn-group">
-                                            <a href="Cliente/Index" class="btn btn-outline-primary">Reservar</a>
-                                        </div>
+                                        <a href="" class="text-reset">
+                                            @Html.ActionLink("Ver más detalles >>","Details", new {  id=item.Id}, new {@class = "btn btn-outline-success" }) ||
+                                            @Html.ActionLink("Hacer Reservacion >>","Create", new {  precio=item.Precio}, new {@class = "btn btn-outline-success" })
+                                        </a>
                                     </div>
                                 </div>
                             </div>

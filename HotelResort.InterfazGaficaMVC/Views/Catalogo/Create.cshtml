@@ -28,7 +28,7 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NIdentidad" class="control-label"></label>
+                <label class="control-label">Numero de Identidad</label>
                 <input asp-for="NIdentidad" class="form-control" />
                 <span asp-validation-for="NIdentidad" class="text-danger"></span>
             </div>
@@ -38,34 +38,34 @@
                 <span asp-validation-for="Movil" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NHabitacion" class="control-label"></label>
+                <label class="control-label">Numero de Habitacion</label>
                 <input asp-for="NHabitacion" class="form-control" />
                 <span asp-validation-for="NHabitacion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PHabitacion" class="control-label"></label>
+                <label class="control-label">Precio de Habitacion</label>
                 <input asp-for="PHabitacion" class="form-control" />
                 <span asp-validation-for="PHabitacion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FyHRegistro" class="control-label"></label>
+                <label class="control-label">Fecha y Hora del Registro</label>
                 <input asp-for="FyHRegistro" class="form-control" />
                 <span asp-validation-for="FyHRegistro" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FyHEntrada" class="control-label"></label>
+                <label class="control-label">Fecha y Hora de Entrada ala Habitacion</label>
                 <input asp-for="FyHEntrada" class="form-control" />
                 <span asp-validation-for="FyHEntrada" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FyHSalida" class="control-label"></label>
+                <label class="control-label">Fecha y Hora de Salida de la Habitacion</label>
                 <input asp-for="FyHSalida" class="form-control" />
                 <span asp-validation-for="FyHSalida" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-outline-success" /> |
-                <a asp-action="Index" class="btn btn-outline-warning">Regresar ala Lista</a>
+                <input type="submit" value="Guardar" class="btn btn-outline-success" /> ||
+                <a asp-action="Index" class="btn btn-outline-warning">Regresar</a>
             </div>
             <span class="text-danger">@ViewBag.Error</span>
         </form>
@@ -73,7 +73,5 @@
 </div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-    }
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

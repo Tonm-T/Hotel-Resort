@@ -42,11 +42,11 @@ namespace HotelResort.EntidadDeNegocio
         //[MaxLength(25, ErrorMessage = "El largo maximo son 10 caracteres")]
         public decimal PHabitacion { get; set; }
 
-        [Required(ErrorMessage = "La Fecha de Entrada es requerido")]
+        [Required(ErrorMessage = "La Fecha y Hora de Registro es requerido")]
         //[MaxLength(25, ErrorMessage = "El largo maximo son 25 caracteres")]
         public DateTime FyHRegistro { get; set; }
 
-        [Required(ErrorMessage = "La Hora de Salida es requerido")]
+        [Required(ErrorMessage = "La Fecha y Hora de Entrada es requerido")]
         //[MaxLength(25, ErrorMessage = "El largo maximo son 25 caracteres")]
         public DateTime FyHEntrada { get; set; }
 

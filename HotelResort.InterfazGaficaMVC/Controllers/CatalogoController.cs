@@ -25,9 +25,10 @@ namespace HotelResort.InterfazGaficaMVC.Controllers
         }
 
         // GET: CatalogoController/Details/5
-        public ActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            return View();
+            var catalogo = await catalogoBL.ObtenerPorIdAsync(new CatalogoHotel { Id = id });
+            return View(catalogo);
         }
 
         // GET: CatalogoController/Create
