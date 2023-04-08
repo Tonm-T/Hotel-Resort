@@ -22,25 +22,24 @@ namespace HotelResort.AccesoADatos
         }
         public static async Task<int> ModificarAsync(Reservacion pReservacion)
         {
-            int resut = 0;
+            int result = 0;
             using (var bdContexto = new BDContexto())
             {
                 var reservacion = await bdContexto.Reservacion.FirstOrDefaultAsync(c => c.Id == pReservacion.Id);
-                reservacion.Nombre = reservacion.Nombre;
-                reservacion.Apellido = reservacion.Apellido;
-                reservacion.Email = reservacion.Email;
-                reservacion.NIdentidad = reservacion.NIdentidad;
-                reservacion.Movil = reservacion.Movil;
-                reservacion.NHabitacion = reservacion.NHabitacion;
-                reservacion.PHabitacion = reservacion.PHabitacion;
-                reservacion.FyHRegistro = reservacion.FyHRegistro;
-                reservacion.FyHEntrada = reservacion.FyHEntrada;
-                reservacion.FyHSalida = reservacion.FyHSalida;
+                reservacion.Nombre = pReservacion.Nombre;
+                reservacion.Apellido = pReservacion.Apellido;
+                reservacion.Email = pReservacion.Email;
+                reservacion.NIdentidad = pReservacion.NIdentidad;
+                reservacion.Movil = pReservacion.Movil;
+                reservacion.NHabitacion = pReservacion.NHabitacion;
+                reservacion.PHabitacion = pReservacion.PHabitacion;
+                reservacion.FyHEntrada = pReservacion.FyHEntrada;
+                reservacion.FyHSalida = pReservacion.FyHSalida;
 
                 bdContexto.Update(reservacion);
-                resut = await bdContexto.SaveChangesAsync();
+                result = await bdContexto.SaveChangesAsync();
             }
-            return resut;
+            return result;
         }
         public static async Task<int> EliminarAsync(Reservacion pReservacion)
         {

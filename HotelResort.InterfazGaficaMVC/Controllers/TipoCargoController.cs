@@ -83,12 +83,12 @@ namespace HotelResort.InterfazGaficaMVC.Controllers
         // GET: TipoCargoController/Delete/5
         public async Task<IActionResult> Delete(TipoCargo pTipoCargo)
         {
+            var TipoCargo = await TipoCargoBL.ObtenerPorIdAsync(pTipoCargo);
             ViewBag.Error = "";
-            var tipocargo = await TipoCargoBL.ObtenerPorIdAsync(pTipoCargo);
-            return View(tipocargo);
+            return View(TipoCargo);
         }
 
-        // POST: TipoCargoController/Delete/5
+        // Acción que recibe la confirmación para eliminar el registro
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id, TipoCargo pTipoCargo)
@@ -98,10 +98,10 @@ namespace HotelResort.InterfazGaficaMVC.Controllers
                 int result = await TipoCargoBL.EliminarAsync(pTipoCargo);
                 return RedirectToAction(nameof(Index));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
-                return View();
+                return View(pTipoCargo);
             }
         }
     }

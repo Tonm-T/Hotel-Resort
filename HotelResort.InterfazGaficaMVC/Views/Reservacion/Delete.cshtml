@@ -4,80 +4,87 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Eliminar el registro del Cliente</h1>
+<body class="bg-secondary d-flex align-items-center vh-50">
+    @*clase para justificar texto y justificar el contenedor*@
+    <div class="modal-dialog justify-content-center">
+        <div class="col-md-25">
+            <div class="modal-content p-sm-5 p-xxl-8 border-danger border-5">
+                <h1>Eliminar Registro Reservacion</h1>
+                <h5>Estas seguro de eliminar el registro de forma permanente ❌📛?</h5>
+                <div>
 
-<h3>Estas seguro de eliminar el registro de forma permanente ❌📛?</h3>
-<div>
+                    <hr />
+                    <dl class="row">
 
-    <hr />
-    <dl class="row">
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.Nombre):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.Apellido):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Apellido)
+                        </dd>
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.Email):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.NIdentidad):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.NIdentidad)
+                        </dd>
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.Movil):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Movil)
+                        </dd>
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.NHabitacion):
+                        </dt>
+                        <dd class="col-sm-10">
+                            # @Html.DisplayFor(model => model.NHabitacion)
+                        </dd>
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.PHabitacion):
+                        </dt>
+                        <dd class="col-sm-10">
+                           $ @Html.DisplayFor(model => model.PHabitacion)
+                        </dd>
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.FyHRegistro):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.FyHRegistro)
+                        </dd>
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.FyHEntrada):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.FyHEntrada)
+                        </dd>
+                        <dt class="col-sm-2 text-danger">
+                            @Html.DisplayNameFor(model => model.FyHSalida):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.FyHSalida)
+                        </dd>
+                    </dl>
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Apellido)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Apellido)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NIdentidad)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NIdentidad)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Movil)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Movil)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NHabitacion)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NHabitacion)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.PHabitacion)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.PHabitacion)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.FyHRegistro)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FyHRegistro)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.FyHEntrada)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FyHEntrada)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.FyHSalida)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FyHSalida)
-        </dd>
+                    <form asp-action="Delete">
+                        <input type="submit" value="Eliminar" class="btn btn-outline-danger" /> |
+                        <a asp-action="Index" class="btn btn-outline-warning">Regresar ala Lista</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
-
-    </dl>
-
-    <form asp-action="Delete">
-        <input type="submit" value="Eliminar" class="btn btn-outline-danger" /> |
-        <a asp-action="Index" class="btn btn-outline-warning">Regresar ala Lista</a>
-    </form>
-</div>

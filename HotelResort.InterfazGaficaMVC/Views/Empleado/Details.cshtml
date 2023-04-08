@@ -3,72 +3,79 @@
 @{
     ViewData["Title"] = "Detalles";
 }
+<body class="bg-secondary d-flex align-items-center vh-50">
+    @*clase para justificar texto y justificar el contenedor*@
+    <div class="modal-dialog justify-content-center">
+        <div class="col-md-25">
+            <div class="modal-content p-sm-5 p-xxl-8 border-info border-3">
+                <h2>Detalles del Empleado</h2>
+                <div>
 
-<h1>Detalles del Empleado</h1>
+                    <hr />
+                    <dl class="row">
 
-<div>
-    
-    <hr />
-    <dl class="row">
-        
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Apellido)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Apellido)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Movil)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Movil)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Direccion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Dui)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Dui)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ClaveEmpleado)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ClaveEmpleado)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaRegistro)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FechaRegistro)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoCargoId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoCargo.Cargo)
-        </dd>
-        
-    </dl>
-</div>
-<div>
-    @Html.ActionLink("Modificar", "Edit", new {  id = Model.Id  }, new {@class="btn btn-outline-primary"}) |
-    <a asp-action="Index" class="btn btn-outline-warning">Regresar ala Lista</a>
-</div>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Nombre):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Apellido):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Apellido)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Email):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Movil):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Movil)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Direccion):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Direccion)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Dui):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Dui)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.ClaveEmpleado):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.ClaveEmpleado)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.FechaRegistro):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.FechaRegistro)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.TipoCargoId):
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.TipoCargo.Cargo)
+                        </dd>
+
+                    </dl>
+                </div>
+                <div>
+                    @Html.ActionLink("Modificar", "Edit", new {  id = Model.Id  }, new {@class="btn btn-outline-primary"}) |
+                    <a asp-action="Index" class="btn btn-outline-warning">Regresar ala Lista</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

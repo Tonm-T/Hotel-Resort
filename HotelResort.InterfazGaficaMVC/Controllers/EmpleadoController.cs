@@ -84,7 +84,7 @@ namespace HotelResort.InterfazGaficaMVC.Controllers
         {
             try
             {
-                int resolt = await empleadoBL.ModificarAsync(pEmpleado);
+                int result = await empleadoBL.ModificarAsync(pEmpleado);
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)

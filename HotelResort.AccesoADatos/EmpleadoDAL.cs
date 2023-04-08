@@ -65,7 +65,6 @@ namespace HotelResort.AccesoADatos
                 empleado.Movil = pEmpleado.Movil;
                 empleado.Direccion = pEmpleado.Direccion;
                 empleado.Dui = pEmpleado.Dui;
-                empleado.FechaRegistro = pEmpleado.FechaRegistro;
                 empleado.TipoCargoId = pEmpleado.TipoCargoId;
 
                 bdContexto.Update(empleado);

@@ -19,9 +19,9 @@ namespace HotelResort.LogicaDeNegocio
         {
             return await TipoCargoDAL.ModificarAsync(pTipoCargo);
         }
-        public async Task<int> EliminarAsync(TipoCargo pTipoCargo)
+        public async Task<int> EliminarAsync(TipoCargo pEmpresa)
         {
-            return await TipoCargoDAL.EliminarAsync(pTipoCargo);
+            return await TipoCargoDAL.EliminarAsync(pEmpresa);
         }
         public async Task<TipoCargo> ObtenerPorIdAsync(TipoCargo pTipoCargo)
         {

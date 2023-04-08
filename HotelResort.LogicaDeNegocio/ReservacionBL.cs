@@ -18,6 +18,7 @@ namespace HotelResort.LogicaDeNegocio
         {
             return await ReservacionDAL.ModificarAsync(pReservacion);
         }
+
         public async Task<int> EliminarAsync(Reservacion pReservacion)
         {
             return await ReservacionDAL.EliminarAsync(pReservacion);

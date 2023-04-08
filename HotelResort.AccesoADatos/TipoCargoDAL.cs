@@ -37,14 +37,14 @@ namespace HotelResort.AccesoADatos
         }
         public static async Task<int> EliminarAsync(TipoCargo pTipoCargo)
         {
-            var resut = 0;
+            int result = 0;
             using (var bdContexto = new BDContexto())
             {
                 var tipocargo = await bdContexto.TipoCargo.FirstOrDefaultAsync(c => c.Id == pTipoCargo.Id);
                 bdContexto.TipoCargo.Remove(tipocargo);
-                resut = await bdContexto.SaveChangesAsync();
+                result = await bdContexto.SaveChangesAsync();
             }
-            return resut;
+            return result;
         }
 
         public static async Task<TipoCargo> ObtenerPorIdAsync(TipoCargo pTipoCargo)
